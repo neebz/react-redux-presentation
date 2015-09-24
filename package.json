@@ -4,6 +4,8 @@
     "babel-loader": "^5.3.2",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
     "webpack": "^1.12.2"
   }
 }

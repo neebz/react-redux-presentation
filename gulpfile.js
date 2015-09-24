@@ -3,18 +3,22 @@ var gutil = require("gulp-util");
 var webpack = require("webpack");
 
 gulp.task('watch', function () {
-    return gulp.watch('src/**/*.js', ["default"])
+    return gulp.watch('./src/**/*.js', ["default"])
 });
 
 gulp.task("default", function(callback) {
     // run webpack
     webpack({
-        context: __dirname + "/src",
-	    entry: "./app.js",
+        context: __dirname,
+	    entry: {
+	    	main: "./src/app.js",
+	    	vendor: "./src/vendor.js"
+	    },
 	    output: {
 	        path: __dirname + "/dist",
-	        filename: "main.js"
+	        filename: "[name].js"
 	    },
+	    devtool: "source-map",
 	    module: {
 		    loaders: [
 		        {
@@ -26,9 +30,7 @@ gulp.task("default", function(callback) {
 		  }
     }, function(err, stats) {
         if(err) throw new gutil.PluginError("webpack", err);
-        gutil.log("[webpack]", stats.toString({
-            // output options
-        }));
+        gutil.log("[webpack]", stats.toString());
         callback();
     });
 });
