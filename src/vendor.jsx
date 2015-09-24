@@ -1,2 +1,2 @@
-import { React } from "../node_modules/react/react";
-import { ReactRouter } from "../node_modules/react-router/umd/ReactRouter";
+import React from 'react/react'
+import { Router, Route, Link} from 'react-router'
