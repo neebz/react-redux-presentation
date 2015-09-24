@@ -1,6 +1,8 @@
-class One  {
+import React from 'react/react'
+
+class One extends React.Component  {
   render() {
-    return <img alt={this.props.caption} src={this.props.src} />;
+    return <div> I am the one! </div>;
   }
 }
 
