@@ -1,1 +1,0 @@
-import { One } from "./slides/one";

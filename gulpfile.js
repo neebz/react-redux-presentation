@@ -11,8 +11,8 @@ gulp.task("default", function(callback) {
     webpack({
         context: __dirname,
 	    entry: {
-	    	main: "./src/app.js",
-	    	vendor: "./src/vendor.js"
+	    	main: "./src/app.jsx",
+	    	vendor: "./src/vendor.jsx"
 	    },
 	    output: {
 	        path: __dirname + "/dist",

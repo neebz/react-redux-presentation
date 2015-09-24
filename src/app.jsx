@@ -1,0 +1,1 @@
+import { One } from "./slides/one.jsx";
