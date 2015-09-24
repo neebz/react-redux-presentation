@@ -1,3 +1,1 @@
-class Hello {
-	
-}
+import { One } from "./slides/one";
