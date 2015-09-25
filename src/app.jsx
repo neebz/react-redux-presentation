@@ -5,11 +5,27 @@ import { Router, Route, Link} from 'react-router'
 import { One } from "./slides/one.jsx";
 
 class Presentation extends React.Component {
+	componentDidMount() {
+	    window.addEventListener('keydown', (e) => {
+	    	if (e.keyCode == 39) {
+	    		console.log("go to next");
+	    	}
+	    	if (e.keyCode == 37) { 
+	    		console.log("go to previous");
+	    	}
+	    });
+	}
+
+	componentWillUnmount () {
+	    window.removeEventListener('keydown');
+	}
+
 	render() {
 		return 	<div>
-					<div> Hi </div>
-					<Link to="/"> Home </Link>
-					<Link to="/one"> Go to one </Link>
+					<div> 
+						<Link to="/"> Home </Link>
+						<Link to="/one"> Go to one </Link>
+					</div>
 					<div> 
 					{
 						this.props.children
