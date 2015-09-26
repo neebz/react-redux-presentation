@@ -1,50 +1,22 @@
 import React from 'react'
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import { One } from "./slides/one.jsx";
+import { timeline } from './reducers/timeline.jsx';
 
-class Presentation extends React.Component {
-	componentDidMount() {
-	    window.addEventListener('keydown', (e) => {
-	    	if (e.keyCode == 39) {
-	    		console.log("go to next");
-	    	}
-	    	if (e.keyCode == 37) { 
-	    		console.log("go to previous");
-	    	}
-	    });
-	}
+import Presentation from './presentation.jsx';
 
-	componentWillUnmount () {
-	    window.removeEventListener('keydown');
-	}
 
-	render() {
-		return 	<div>
-					<div> 
-						<Link to="/"> Home </Link>
-						<Link to="/one"> Go to one </Link>
-					</div>
-					<div> 
-					{
-						this.props.children
-					}
-					</div>
-				</div>
-	}
-}
-
+let store = createStore(timeline);
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-  React.render((
-  	  <Router>
-  	    <Route path="/" component={Presentation}>
-  	      <Route path="one" component={One}/>
-  	    </Route>
-  	  </Router>
-  	), document.body)	
+  React.render(
+  	<Provider store={store}>
+  	{() =>
+  	  <Presentation />
+  	}
+	</Provider>
+  	, document.body)	
 });
-
-
-
