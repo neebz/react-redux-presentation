@@ -6,4 +6,4 @@ class One extends React.Component  {
   }
 }
 
-export default { One };
+export default One;
