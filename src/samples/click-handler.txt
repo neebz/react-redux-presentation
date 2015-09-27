@@ -1,0 +1,7 @@
+$("button").on("click", function () { 
+	
+	$.get("/emails", function(emails) {
+		// do your stuff
+	})
+
+})
