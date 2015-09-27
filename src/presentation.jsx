@@ -29,11 +29,13 @@ class Presentation extends React.Component {
 	render() {
 		const { dispatch, currentSlide } = this.props;
 		let CurrentSlide = this.getCurrentSlide();
+		var divStyle = {
+		  display: 'flex',
+		  height: "900px",
+		  flexDirection: "column",
+		};
 		return 	<div>
-					<div> 
-						<div> Emerging Trends in Whatever </div>
-					</div>
-					<div> 
+					<div style={divStyle}> 
 						<CurrentSlide />
 					</div>
 				</div>
