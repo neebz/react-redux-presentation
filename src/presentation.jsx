@@ -5,19 +5,21 @@ import slides from "./slides/index.jsx";
 
 class Presentation extends React.Component {
 	componentDidMount() {
-		const { dispatch } = this.props;
-	    window.addEventListener('keydown', (e) => {
-	    	if (e.keyCode == 39) {
-	    		dispatch({ type: 'NEXT_SLIDE' });
-	    	}
-	    	if (e.keyCode == 37) { 
-	    		dispatch({ type: 'PREVIOUS_SLIDE' });
-	    	}
-	    });
+	    window.addEventListener('keydown', this.keyDownEvent.bind(this));
 	}
 
 	componentWillUnmount () {
-	    window.removeEventListener('keydown');
+	    window.removeEventListener('keydown', this.keyDownEvent.bind(this));
+	}
+
+	keyDownEvent(e) {
+		const { dispatch } = this.props;
+		if (e.keyCode == 39) {
+			dispatch({ type: 'NEXT_SLIDE' });
+		}
+		if (e.keyCode == 37) { 
+			dispatch({ type: 'PREVIOUS_SLIDE' });
+		}
 	}
 
 	getCurrentSlide () {
