@@ -26,6 +26,9 @@ const slides = [
 	<CodeSlide heading="Cancelling request..." codeSample={require("raw!../samples/cancelling-request-1.txt")} />,
 	<CodeSlide heading="Cancelling request..." codeSample={require("raw!../samples/cancelling-request-2.txt")} />,
 	<MarkdownSlide heading="Problems" text={require("raw!../samples/ui-flow-problems.md")} />,
+	<CodeSlide heading="would love to have something like this..." codeSample={require("raw!../samples/ideal-case-code.txt")} />,
+	<CodeSlide heading="infact when you think about it, this:" codeSample={require("raw!../samples/need-to-poll.txt")} />,
+	<CodeSlide heading="...should be changed to this:" codeSample={require("raw!../samples/state-based-code.txt")} />,
 	<One />
 ]
 

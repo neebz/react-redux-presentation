@@ -1,0 +1,10 @@
+function fetchAndRenderEmails () {
+	isFetching = true;
+	
+	emailsRequest = $.get("/emails", function(emails) {
+		
+		isFetching = false;
+		emailsState = emails;
+		unreadEmails = _.filter(emails, function (e) { return e.isUnread; });
+	})
+}

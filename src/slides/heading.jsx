@@ -8,7 +8,7 @@ class Heading extends React.Component  {
   		"marginBottom":"10px",
   		"marginLeft":"auto",
   		"marginRight":"auto",
-  		"height": "100px",
+  		"minHeight": "100px",
   		"lineHeight": "100px",
   		"textAlign": "center",
   		"width":"90%",
