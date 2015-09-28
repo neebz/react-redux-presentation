@@ -13,7 +13,7 @@ function timeline(state = 0, action) {
 		
 	case 'PREVIOUS_SLIDE':
     	if (state === 0) {
-			return state = 0; 
+			return state = slides.length - 1; 
 		} else {
 			return state -= 1;	
 		}
