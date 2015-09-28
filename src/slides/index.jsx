@@ -20,6 +20,7 @@ const slides = [
 	<StatementSlide text="Polling request should not start if there is already a request in progress" />,
 	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-1.md")} />,
 	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-2.md")} />,
+	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-3.md")} />,
 	<One />
 ]
 
