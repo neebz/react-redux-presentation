@@ -1,0 +1,9 @@
+$("#cancel-button").on("click", function () { 
+	
+	emailsRequest.abort() // abort xhr
+	isFetching = false;
+	/*
+		GO READ FULL CODE TO UNDERSTAND HOW UI IS WORKING 
+		AND UPDATE UI ACCORDINGLY 
+	*/
+}) 

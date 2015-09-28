@@ -21,6 +21,11 @@ const slides = [
 	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-1.md")} />,
 	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-2.md")} />,
 	<MarkdownSlide heading="Maintaining UI State" text={require("raw!../samples/fixing-polling-3.md")} />,
+	<CodeSlide heading="Using isFetching" codeSample={require("raw!../samples/using-isFetching.txt")} />,
+	<StatementSlide text="Add a feature to allow user to cancel a request" />,
+	<CodeSlide heading="Cancelling request..." codeSample={require("raw!../samples/cancelling-request-1.txt")} />,
+	<CodeSlide heading="Cancelling request..." codeSample={require("raw!../samples/cancelling-request-2.txt")} />,
+	<MarkdownSlide heading="Problems" text={require("raw!../samples/ui-flow-problems.md")} />,
 	<One />
 ]
 

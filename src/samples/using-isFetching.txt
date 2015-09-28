@@ -1,0 +1,15 @@
+function fetchAndRenderEmails () {
+	$("button").prop('disabled', true);
+
+	isFetching = true; //<--
+	
+	emailsRequest = $.get("/emails", function(emails) {
+		isFetching = false; //<--
+		$("button").prop('disabled', false);
+		renderEmails(emails);
+		var unreadEmails = _.filter(emails, function (e) { return e.isUnread; });
+		showUnreadBubble(unreadEmails);
+	})
+}
+
+setInterval( function() { if (!isFetching) fetchAndRenderEmails(); }, 3000 }  //<--
