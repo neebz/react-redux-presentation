@@ -36,7 +36,7 @@ class Presentation extends React.Component {
 		};
 		return 	<div>
 					<div style={divStyle}> 
-						<CurrentSlide key={this.props.currentSlide} />
+						{CurrentSlide}
 					</div>
 				</div>
 	}

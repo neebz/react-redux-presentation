@@ -2,7 +2,7 @@ import React from 'react/react'
 import Heading from './heading.jsx'
 import Highlight from 'react-highlight';
 
-class RenderEmailsCode extends React.Component  {
+class CodeSlide extends React.Component  {
   render() {
 
     let divStyle = {
@@ -17,10 +17,13 @@ class RenderEmailsCode extends React.Component  {
       textAlign: "left",
     }
 
-    let codeSample = require("raw!../samples/click-handler-with-render-emails.txt");
+    // let path = "raw!" + this.props.codeSamplePath;
+    // let codeSample = require(path);
+
+    let codeSample = this.props.codeSample;
   	
     return  <div>
-              <Heading title="Plain ole' jQuery" />
+              <Heading title={this.props.heading} />
               <div style={divStyle}>
                 <div style={{display:"flex", flexDirection:"column", height:"100%"}}>
                   
@@ -36,4 +39,4 @@ class RenderEmailsCode extends React.Component  {
   }
 }
 
-export default RenderEmailsCode;
+export default CodeSlide;

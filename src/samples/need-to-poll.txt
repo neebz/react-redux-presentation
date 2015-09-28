@@ -1,0 +1,15 @@
+function fetchAndRenderEmails () {
+	$("button").prop('disabled', true);
+	
+	emailsRequest = $.get("/emails", function(emails) {
+		
+		$("button").prop('disabled', false);
+		renderEmails(emails);
+		var unreadEmails = _.filter(emails, function (e) { return e.isUnread; });
+		showUnreadBubble(unreadEmails);
+	})
+}
+
+$("button").on("click", fetchAndRenderEmails)
+
+ setInterval( fetchAndRenderEmails, 3000 )
