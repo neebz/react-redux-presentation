@@ -1,0 +1,16 @@
+$("button").on("click", function () { 
+	
+	$("button").prop('disabled', true);
+	
+	$.get("/emails", function(emails) {
+		
+		$("button").prop('disabled', false);
+		renderEmails(emails);
+
+		// render unread count
+		var unreadEmails = _.filter(emails, function (e) { return e.isUnread; }); // <--
+		showUnreadBubble(unreadEmails.length); // <--
+
+
+	})
+})

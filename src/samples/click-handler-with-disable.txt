@@ -1,0 +1,10 @@
+$("button").on("click", function () { 
+	
+	$("button").prop('disabled', true); // <--
+	
+	$.get("/emails", function(emails) {
+		
+		$("button").prop('disabled', false); // <--
+		// do you stuff
+	})
+})
