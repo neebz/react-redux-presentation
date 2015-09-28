@@ -5,6 +5,7 @@
     "react-bootstrap": "^0.25.2",
     "react-highlight": "^0.5.0",
     "react-redux": "^3.0.0",
+    "react-remarkable": "^1.1.1",
     "redux": "^3.0.0"
   },
   "devDependencies": {
