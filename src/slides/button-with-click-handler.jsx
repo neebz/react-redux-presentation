@@ -1,9 +1,9 @@
 import React from 'react/react'
 import Heading from './heading.jsx'
-import { Button } from 'react-bootstrap';
+import { Panel, Button } from 'react-bootstrap';
 import Highlight from 'react-highlight';
 
-class Zero extends React.Component  {
+class ButtonWithClickHandler extends React.Component  {
   render() {
 
     let divStyle = {
@@ -24,25 +24,24 @@ class Zero extends React.Component  {
 
     let contentStyle = {
       margin: "auto",
-      fontSize:"50px",
+      fontSize:"20px",
       textAlign: "left",
       width: "90%"
     }
 
 
-    // let codeSample = "$('button').on('click', \n function () { \n $.get('/emails', function(emails) { \n // do your stuff \n }) \n })";
     let codeSample = require("raw!../samples/click-handler.txt");
 
   	
     return  <div>
-              <Heading title="Welcome" />
+              <Heading title="Plain ole' jQuery" />
               <div style={divStyle}>
                 <div style={{display:"flex"}}>
                   
                   <div style={boxesStyle}>
                     <div style={{display:"flex", flexDirection: "column", width:"100%", height:"100%"}}>
                       <div style={contentStyle}>
-                        <Button bsStyle="primary">Get Emails</Button>
+                        <Panel> <Button bsStyle="primary" style={{fontSize: "25px"}}>Fetch Me Some Emails</Button> </Panel>
                       </div>
                     </div>
                   </div>
@@ -63,4 +62,4 @@ class Zero extends React.Component  {
   }
 }
 
-export default Zero;
+export default ButtonWithClickHandler;

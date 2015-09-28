@@ -4,17 +4,18 @@ class Heading extends React.Component  {
   render() {
   	let divStyle = {
   		"backgroundColor": "whitesmoke",
-  		"marginTop":"10px",
+  		"marginTop":"20px",
   		"marginBottom":"10px",
   		"marginLeft":"auto",
   		"marginRight":"auto",
-  		"height": "50px",
-  		"lineHeight": "50px",
+  		"height": "100px",
+  		"lineHeight": "100px",
   		"textAlign": "center",
   		"width":"90%",
   		"color": "black",
-      "fontFamily": "Verdana",
-      "fontSize": "20px", 
+      "borderRadius": "5px",
+      "textShadow": "1px 1px 0px",
+      "fontSize": "75px", 
   	}
     return  <div style={divStyle}> {this.props.title} </div>;
   }

@@ -1,6 +1,6 @@
 
 const slides = [
-	require("./home.jsx"),
+	require("./button-with-click-handler.jsx"),
 	require("./one.jsx")
 ]
 
