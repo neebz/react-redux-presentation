@@ -1,0 +1,8 @@
+function push(array, element) {
+    array.push(element);
+    return array;
+}
+
+function concat(array, elements) {
+    return array.concat(elements);
+}
