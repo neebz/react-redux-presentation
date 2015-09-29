@@ -13,7 +13,7 @@ class UIExample extends React.Component  {
 
     let boxesStyle = {
       margin:"auto",
-      width:"100%",
+      width:"50%",
       textAlign: "left",
     }
 
