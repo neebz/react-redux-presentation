@@ -8,7 +8,7 @@ function fetchAndRenderEmails () {
 		$("button").prop('disabled', false);
 		renderEmails(emails);
 		var unreadEmails = _.filter(emails, function (e) { return e.isUnread; });
-		showUnreadBubble(unreadEmails);
+		showUnreadBubble(unreadEmails.length);
 	})
 }
 

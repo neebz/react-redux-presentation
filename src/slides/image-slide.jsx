@@ -18,7 +18,7 @@ class ImageSlide extends React.Component  {
     }
   	
     return  <div>
-              <Heading title="Our inbox" />
+              <Heading title={this.props.heading} />
               <div style={divStyle}>
                 <div style={{display:"flex", flexDirection:"column", height:"100%"}}>
                   
