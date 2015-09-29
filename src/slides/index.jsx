@@ -1,6 +1,7 @@
 import React from "react/react";
 
 
+
 import PlainButton from "./plain-button.jsx";
 import ButtonWithClickHandler from "./button-with-click-handler.jsx";
 import UIExample from "./ui-example.jsx";
@@ -8,6 +9,7 @@ import ComponentDrivenUI from "./component-driven-ui.jsx";
 import CodeSlide from "./code-slide.jsx";
 import MarkdownSlide from "./markdown-slide.jsx";
 import StatementSlide from "./statement-slide.jsx";
+import ImageSlide from "./image-slide.jsx";
 import One from "./one.jsx";
 
 const slides = [
@@ -32,9 +34,11 @@ const slides = [
 	<CodeSlide heading="...should be changed to this:" codeSample={require("raw!../samples/state-based-code.txt")} />,
 	<StatementSlide text="MODEL VIEW CONTROLLER" />,
 	<UIExample />,
-	<StatementSlide text="TODO: Image of UIExample with view boundaries + one model box" />,
-	<StatementSlide text="TODO: Image of UIExample with view boundaries + one model box + the arrows" />,
-	<StatementSlide text="TODO: Image with lotsa views and lots arrows" />,
+	<ImageSlide heading="image" path="./images/views.png" />,
+	<ImageSlide heading="image" path="./images/views-2.png" />,
+	<ImageSlide heading="image" path="./images/views-model.png" />,
+	<ImageSlide heading="image" path="./images/views-model-2.png" />,
+	<ImageSlide heading="image" path="./images/jackie-chan.png" />,
 	<StatementSlide text="React + Flux" />,
 	<CodeSlide heading="What's the difference between these two methods?" codeSample={require("raw!../samples/pure-functions.txt")} />,
 	<MarkdownSlide heading="Pure Functions" text={require("raw!../samples/pure-functions.md")} />,
@@ -46,6 +50,7 @@ const slides = [
 	<StatementSlide heading="Flux: Single flow of data" text="TODO: show image with dispatcher in the middle of view and store" />,
 	<StatementSlide heading="React + Flux" text="These ideas can allow us to build all kinds of UI e.g. React Native" />,
 	<ComponentDrivenUI />,
+	
 	<One />
 ]
 
