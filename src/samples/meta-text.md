@@ -1,0 +1,3 @@
+- This presentation is built using React and Redux
+- App state: `Current Slide`
+- http://github.com/neebz/react-redux-presentation
