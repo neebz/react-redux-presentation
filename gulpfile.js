@@ -19,9 +19,10 @@ gulp.task("default", function(callback) {
 	        filename: "main.js"
 	    },
 	    plugins: [
-	    	new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js")
+	    	new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"),
+	    	new webpack.optimize.UglifyJsPlugin()
 	    ],
-	    devtool: "source-map",
+	    devtool: process.env.NODE_ENV ? false: "source-maps",
 	    module: {
 		    loaders: [
 		        {
