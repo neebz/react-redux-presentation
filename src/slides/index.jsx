@@ -9,10 +9,12 @@ import ComponentDrivenUI from "./component-driven-ui.jsx";
 import CodeSlide from "./code-slide.jsx";
 import MarkdownSlide from "./markdown-slide.jsx";
 import StatementSlide from "./statement-slide.jsx";
+import IntroSlide from "./intro-slide.jsx";
 import ImageSlide from "./image-slide.jsx";
 import One from "./one.jsx";
 
 const slides = [
+	<IntroSlide />,
 	<PlainButton />,
 	<ButtonWithClickHandler />,
 	<CodeSlide heading="Plain ole' jQuery" codeSample={require("raw!../samples/click-handler-with-disable.txt")} />,
