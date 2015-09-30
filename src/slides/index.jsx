@@ -39,6 +39,7 @@ const slides = [
 	<ImageSlide heading="MVC" path="./images/views.png" />,
 	<ImageSlide heading="MVC" path="./images/views-2.png" />,
 	<ImageSlide heading="MVC" path="./images/views-model.png" />,
+	<MarkdownSlide heading="How on server side?" text="`emails = model->getEmails();`" />,
 	<ImageSlide heading="MVC" path="./images/views-model-2.png" />,
 	<ImageSlide heading="MVC" path="./images/jackie-chan.png" />,
 	<StatementSlide text="React + Flux" />,
@@ -54,8 +55,8 @@ const slides = [
 	<ImageSlide heading="Flux: Single flow of data" path="./images/dispatcher-with-arrows.png" />,
 	<StatementSlide heading="React + Flux" text="These ideas can allow us to build all kinds of UI e.g. React Native" />,
 	<ComponentDrivenUI />,
-	
-	<One />
+	<MarkdownSlide heading="Finally" text={require("raw!../samples/meta-text.md")} />,
+	<StatementSlide text="Thanks!" />,
 ]
 
 export default slides;
