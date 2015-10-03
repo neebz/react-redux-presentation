@@ -17,4 +17,4 @@ Access the presentation at `http://localhost:8000/index.html`
 
 # Contact
 
-Twitter: @neebz
+[@neebz](https://www.twitter.com/neebz)
